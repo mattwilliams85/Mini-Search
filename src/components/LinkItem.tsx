@@ -15,17 +15,12 @@ const LinkItem = ({ item }: LinkItemProps) => {
         alt='Source Icon'
         className='mr-2 inline-block h-11 w-14 min-w-14 rounded object-cover shadow-sm'
       />
-      <div>
-        <a
-          href={item?.url}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='max-w-xl py-1 font-medium text-blue-500 hover:underline'
-        >
-          {item?.title}
-        </a>
-        <div className='text-sm text-gray-500'>{item.date}</div>
-      </div>
+      <a href={item?.url} target='_blank' rel='noopener noreferrer'>
+        <div>
+          <span className='max-w-xl py-1 font-medium'>{item?.title}</span>
+          <div className='text-sm text-gray-500'>{item.date}</div>
+        </div>
+      </a>
     </li>
   )
 }
